@@ -33,3 +33,8 @@ pbcopy < ~/.ssh/id_ed_github_oximeeg.pub
   ```
   ssh -T oximeeg.github.com
   ```
+
+### Clone
+```
+git clone oximeeg.github.com:oximeeg/env.git
+```
