@@ -1,0 +1,10 @@
+autoload -U compinit
+compinit -u
+setopt nonomatch
+
+export LANG=en_US.UTF-8
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+
+eval "$(rbenv init -)"
+
+[[ -s "$HOME/.zshrc" ]] && source "$HOME/.zshrc"
