@@ -27,7 +27,7 @@ alias gm='git merge'
 alias gp='gb | grep '\''*'\'' | awk '\''{print $2}'\'' | xargs git push --set-upstream origin'
 alias gr='git rebase'
 alias gs='git status'
-alias gt='git commit --amend --date "$(date)"'
+alias gt='git commit --amend --reset-author'
 
 alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
 

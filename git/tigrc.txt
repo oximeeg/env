@@ -1,1 +1,8 @@
+set mouse = yes
+
+set main-view-id = yes
+set main-view-date = custom
+set main-view-date-format = "%d-%m-%Y"
+set main-view-author = abbreviated
+
 set diff-options = -m --first-parent
