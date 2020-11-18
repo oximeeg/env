@@ -5,6 +5,12 @@ setopt nonomatch
 export LANG=en_US.UTF-8
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
+export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
+export PATH="$JAVA_HOME/bin:$PATH"
+
 eval "$(rbenv init -)"
+
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 [[ -s "$HOME/.zshrc" ]] && source "$HOME/.zshrc"

@@ -111,6 +111,12 @@ brew install coreutils git git-lfs rbenv tig
   ln -snf ~/github/env/zsh/zshrc ~/.zshrc
   ```
 
+- SDKMAN
+  ```
+  sed -i '' -e 's/sdkman_auto_answer=false/sdkman_auto_answer=true/' ${HOME}/.sdkman/etc/config
+  sed -i '' -e 's/sdkman_auto_selfupdate=false/sdkman_auto_selfupdate=true/' ${HOME}/.sdkman/etc/config
+  ```
+
 ### Change layout of Launchpad
 ```
 defaults write com.apple.dock springboard-columns -int 5
