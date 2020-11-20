@@ -2,7 +2,6 @@
   "editor.autoClosingBrackets": "never",
   "editor.autoClosingQuotes": "never",
   "editor.detectIndentation": false,
-  "editor.fontSize": 20,
   "editor.insertSpaces": true,
   "editor.links": false,
   "editor.mouseWheelZoom": false,
@@ -14,6 +13,6 @@
   "explorer.confirmDragAndDrop": false,
   "git.confirmSync": false,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 2,
   "workbench.startupEditor": "newUntitledFile"
 }
