@@ -2,8 +2,7 @@
 
 ### Generating a SSH key
 ```
-ssh-keygen -t ed25519 -f ~/.ssh/id_ed_github_oximeeg
-# Don't enter anything when asked for passphrase.
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed_github_oximeeg -P ""
 ```
 
 ### Copy the SSH key to your clipboard.
