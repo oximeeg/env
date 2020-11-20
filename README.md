@@ -119,9 +119,13 @@ brew install coreutils git git-lfs rbenv tig
 
 ### Change layout of Launchpad
 ```
-defaults write com.apple.dock springboard-columns -int 5
+defaults write com.apple.dock springboard-columns -int 9
 defaults write com.apple.dock springboard-rows -int 5
 defaults write com.apple.dock ResetLaunchPad -bool TRUE
-defaults write com.apple.desktopservices DSDontWriteNetworkStores True
 killall Dock
+```
+
+### Don't Write Network Stores of .DS_Store
+```
+defaults write com.apple.desktopservices DSDontWriteNetworkStores True
 ```
