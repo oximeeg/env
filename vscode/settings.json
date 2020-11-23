@@ -4,6 +4,7 @@
   "editor.detectIndentation": false,
   "editor.insertSpaces": true,
   "editor.links": false,
+  "editor.minimap.enabled": false,
   "editor.mouseWheelZoom": false,
   "editor.renderWhitespace": "all",
   "editor.suggestSelection": "first",
