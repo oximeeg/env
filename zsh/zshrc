@@ -29,6 +29,16 @@ alias gr='git rebase'
 alias gs='git status'
 alias gt='git commit --amend --reset-author'
 
+alias nc='npm ci'
+alias ni='npm install'
+alias nid='ni --save-dev'
+alias nig='ni --global'
+alias nis='ni --save'
+alias no='npm outdated'
+alias nr='npm run'
+alias nu='npm uninstall'
+alias nx='npx'
+
 alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
 
 alias zip='zip -qr'

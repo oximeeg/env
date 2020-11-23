@@ -49,7 +49,7 @@ git clone oximeeg.github.com:oximeeg/env.git
 ### Homebrew
 
 ```
-brew install coreutils git git-lfs rbenv tig
+brew install coreutils git git-lfs nodenv rbenv tig
 ```
 
 - rbenv
@@ -58,6 +58,14 @@ brew install coreutils git git-lfs rbenv tig
   rbenv install 2.7.2
   rbenv global 2.7.2
   rbenv rehash
+  ```
+
+- nodenv
+  ```
+  nodenv install -l | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | tail -n 3 | awk '{print $1}'
+  nodenv install 15.2.1
+  nodenv global 15.2.1
+  nodenv rehash
   ```
 
 ### iTerm2
@@ -112,8 +120,12 @@ brew install coreutils git git-lfs rbenv tig
 
 - SDKMAN
   ```
-  sed -i '' -e 's/sdkman_auto_answer=false/sdkman_auto_answer=true/' ${HOME}/.sdkman/etc/config
-  sed -i '' -e 's/sdkman_auto_selfupdate=false/sdkman_auto_selfupdate=true/' ${HOME}/.sdkman/etc/config
+  sed -i '' \
+      -e 's/sdkman_auto_answer=false/sdkman_auto_answer=true/' \
+          ${HOME}/.sdkman/etc/config
+  sed -i '' \
+      -e 's/sdkman_auto_selfupdate=false/sdkman_auto_selfupdate=true/' \
+          ${HOME}/.sdkman/etc/config
   ```
 
 ### Change layout of Launchpad
