@@ -40,33 +40,33 @@ git clone oximeeg.github.com:oximeeg/env.git
 
 # Application
 
-- [Google Chrome](https://www.google.com/chrome/)
-- [Homebrew](https://brew.sh/)
-- [iTerm2](https://www.iterm2.com/downloads.html)
-- [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
-- [Visual Studio Code](https://code.visualstudio.com/)
+### [Homebrew](https://brew.sh/)
 
-### Homebrew
+- CUI
+  ```
+  brew install coreutils git git-lfs nodenv rbenv tig
+  ```
 
+- GUI
+  ```
+  brew install --cask iterm2 google-chrome visual-studio-code karabiner-elements
+  ```
+
+### rbenv
 ```
-brew install coreutils git git-lfs nodenv rbenv tig
+rbenv install -l
+rbenv install 2.7.2
+rbenv global 2.7.2
+rbenv rehash
 ```
 
-- rbenv
-  ```
-  rbenv install -l
-  rbenv install 2.7.2
-  rbenv global 2.7.2
-  rbenv rehash
-  ```
-
-- nodenv
-  ```
-  nodenv install -l | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | tail -n 3 | awk '{print $1}'
-  nodenv install 15.2.1
-  nodenv global 15.2.1
-  nodenv rehash
-  ```
+### nodenv
+```
+nodenv install -l | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | tail -n 3 | awk '{print $1}'
+nodenv install 15.2.1
+nodenv global 15.2.1
+nodenv rehash
+```
 
 ### iTerm2
 - General > Preferences > Load preferences
