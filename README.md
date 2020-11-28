@@ -49,7 +49,7 @@ git clone oximeeg.github.com:oximeeg/env.git
 
 - GUI
   ```
-  brew install --cask iterm2 google-chrome visual-studio-code karabiner-elements
+  brew install --cask android-studio google-chrome iterm2 karabiner-elements visual-studio-code
   ```
 
 ### rbenv
