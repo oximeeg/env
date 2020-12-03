@@ -11,12 +11,12 @@ pbcopy < ~/.ssh/id_ed_github_oximeeg.pub
 ```
 
 ### Adding a new SSH key
-[Github settings page](https://github.com/settings/keys).
+- [Github settings page](https://github.com/settings/keys).
 
 ### SSH config
 - Open config file
   ```
-  code ~/.ssh/config
+  vi ~/.ssh/config
   ```
 
 - Add github host
@@ -44,7 +44,7 @@ git clone oximeeg.github.com:oximeeg/env.git
 
 - CUI
   ```
-  brew install coreutils git git-lfs nodenv rbenv tig
+  brew install coreutils git nodenv ruby tig
   ```
 
 - GUI
@@ -52,19 +52,11 @@ git clone oximeeg.github.com:oximeeg/env.git
   brew install --cask android-studio google-chrome iterm2 karabiner-elements visual-studio-code
   ```
 
-### rbenv
-```
-rbenv install -l
-rbenv install 2.7.2
-rbenv global 2.7.2
-rbenv rehash
-```
-
 ### nodenv
 ```
 nodenv install -l | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | tail -n 3 | awk '{print $1}'
-nodenv install 15.2.1
-nodenv global 15.2.1
+nodenv install 15.3.0
+nodenv global 15.3.0
 nodenv rehash
 ```
 
@@ -76,7 +68,6 @@ nodenv rehash
 
 ### Visual Studio Code
 
-- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
 
 # Environment
@@ -118,7 +109,7 @@ nodenv rehash
   ln -snf ~/github/env/zsh/zshrc ~/.zshrc
   ```
 
-- SDKMAN
+- [SDKMAN](https://sdkman.io/)
   ```
   sed -i '' \
       -e 's/sdkman_auto_answer=false/sdkman_auto_answer=true/' \

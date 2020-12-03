@@ -5,6 +5,10 @@ setopt RM_STAR_SILENT
 
 export LANG=en_US.UTF-8
 
+# Homebrew(silicon)
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="$(brew --prefix openssl)/bin:$PATH"
+
 # GNU
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
@@ -19,8 +23,17 @@ export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
 export PATH="$ANDROID_SDK_ROOT/build-tools:$PATH"
 
+# Ruby
+RUBY_DIR="$(brew --prefix ruby)"
+export PATH="$RUBY_DIR/bin:$PATH"
+export LDFLAGS="-L$RUBY_DIR/lib"
+export CPPFLAGS="-I$RUBY_DIR/include"
+export PKG_CONFIG_PATH="$RUBY_DIR/lib/pkgconfig"
+## gem
+GEM_DIR="$(gem environment | grep '\- INSTALLATION DIRECTORY:' | awk '{print $4}')"
+export PATH="$GEM_DIR/bin:$PATH"
+
 # env
-eval "$(rbenv init -)"
 eval "$(nodenv init -)"
 
 # SDKMAN!!
