@@ -11,7 +11,7 @@ alias grep='grep --color=auto'
 alias ll='ls -al --color=auto'
 alias ls='ls -l --color=auto'
 alias mw='echo '\''{"folders":[{"path":"."}]}'\'' | jq . > vs.code-workspace'
-alias update='brew update && brew upgrade && brew upgrade --cask && gem update --system && gem update && sdk update'
+alias update='brew update && brew upgrade --greedy && brew cleanup && sdk update && anyenv update && gem update --system && gem update && npm install -g npm'
 alias x='exit'
 alias zip='zip -qr'
 
@@ -33,7 +33,7 @@ alias gs='git status'
 alias gt='git commit --amend --reset-author'
 
 alias nc='npm ci'
-alias ni='npm install'
+alias ni='npm install --save-exact'
 alias nid='ni --save-dev'
 alias nig='ni --global'
 alias nis='ni --save'
@@ -46,3 +46,7 @@ alias pod='bundle exec pod'
 alias podi='pod install --no-repo-update'
 alias podr='pod repo update'
 alias podu='pod update'
+
+# SDKMAN!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

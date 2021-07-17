@@ -44,20 +44,28 @@ git clone oximeeg.github.com:oximeeg/env.git
 
 - CUI
   ```
-  brew install coreutils git nodenv ruby tig
+  brew install \
+    coreutils \
+    git \
+    nodenv \
+    ruby \
+    tig
   ```
 
 - GUI
   ```
-  brew install --cask android-studio google-chrome iterm2 karabiner-elements visual-studio-code
+  brew install --cask \
+    android-studio \
+    google-chrome \
+    iterm2 \
+    karabiner-elements \
+    sourcetree \
+    visual-studio-code
   ```
 
-### nodenv
+### [anyenv](https://github.com/anyenv/anyenv)
 ```
-nodenv install -l | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | tail -n 3 | awk '{print $1}'
-nodenv install 15.3.0
-nodenv global 15.3.0
-nodenv rehash
+zsh ./anyenv/setup.zsh
 ```
 
 ### iTerm2
@@ -68,7 +76,10 @@ nodenv rehash
 
 ### Visual Studio Code
 
-- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
+```
+code --install-extension mhutchie.git-graph
+code --install-extension shardulm94.trailing-spaces
+```
 
 # Environment
 
@@ -113,10 +124,13 @@ nodenv rehash
   ```
   sed -i '' \
       -e 's/sdkman_auto_answer=false/sdkman_auto_answer=true/' \
-          ${HOME}/.sdkman/etc/config
+          ~/.sdkman/etc/config
   sed -i '' \
       -e 's/sdkman_auto_selfupdate=false/sdkman_auto_selfupdate=true/' \
-          ${HOME}/.sdkman/etc/config
+          ~/.sdkman/etc/config
+  sed -i '' \
+      -e 's/sdkman_auto_env=false/sdkman_auto_env=true/' \
+          ~/.sdkman/etc/config
   ```
 
 ### Change layout of Launchpad

@@ -6,10 +6,11 @@ setopt RM_STAR_SILENT
 export LANG=en_US.UTF-8
 
 # Homebrew(silicon)
-export PATH="/opt/homebrew/bin:$PATH"
+BREW_PREFIX=/opt/homebrew
+export PATH="$BREW_PREFIX/bin:$PATH"
 
 # GNU
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+export PATH="$BREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
 
 # Java
 export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
@@ -22,17 +23,8 @@ export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
 export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
 export PATH="$ANDROID_SDK_ROOT/build-tools:$PATH"
 
-# Ruby
-export PATH="$(brew --prefix ruby)/bin:$PATH"
-## gem
-export PATH="$(gem environment | grep '\- INSTALLATION DIRECTORY:' | awk '{print $4}')/bin:$PATH"
-
 # env
-eval "$(nodenv init -)"
-
-# SDKMAN!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+eval "$(anyenv init -)"
 
 # zshrc
 [[ -s "$HOME/.zshrc" ]] && source "$HOME/.zshrc"
